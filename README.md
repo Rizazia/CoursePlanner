@@ -16,7 +16,7 @@ Displays the current term and course the user is enrolled in. This is determined
 Displays a list of the user's terms, courses, mentors, or assessments (referred to as items) determined via polymorphism when the activity is started. Clicking any of the items will open the activity that described it in full and allows modification of that item in a new activity. There is also a button that allows for the creation of a new item that will open the activity that handles its creation (again determined through the same polymorphism as the rest of the activity).
 
 ## AddMod (Item) Activity
-### These are all simalar in function and only differ in the form used to describe the item. Polymorphism is NOT used to collapse these four activities as each requires a different form and combining the forms into one page would severly reduce readuce readability throughout the file and splitting the activity does not impact performance and file size in a meaningful way in this instance. Since they are all mostly the same they will be described at the same time.
+These are all simalar in function and only differ in the form used to describe the item. Polymorphism is NOT used to collapse these four activities as each requires a different form and combining the forms into one page would severly reduce readuce readability throughout the file and splitting the activity does not impact performance and file size in a meaningful way in this instance. Since they are all mostly the same they will be described at the same time.
 ### The Specific files described here are:
 #### AddModAssessmentActivity
 #### AddModCourseActivity
@@ -54,52 +54,83 @@ As described earlier, this application uses SQLite which provides offline access
 # Term Table
 ### Fields:
 ID - int PrimaryKey AutoIncrement
+
 Name - string not null
+
 StartDate - date not null
+
 EndDate - date not null
+
 
 # Course Table
 ### Fields:
 ID - int PrimaryKey AutoIncrement
+
 TermId - int references(Term) not null
+
 MentorId - int references(Mentor) not null
+
 Name - string not null
+
 StartDate - date not null
+
 EndDate - date not null
+
 Status - string not null
+
 Notes - string
+
 Hasnotification - boolean not null default(false)
+
 
 # Assessment table
 ### Fields:
 ID - int PrimaryKey AutoIncrement
+
 CourseId - int references(Course) not null
+
 Name - string not null
+
 Type - string not null
+
 Notes - String
 
 
-## Note: the mentor table is split into three tables to allow an individual mentor to possess an arbitrary amount of phone numbers and email adrresses efficiently as it is not unheard of individuals to have multiple emails/phone numbers 
+
+#### Note: the mentor table is split into three tables to allow an individual mentor to possess an arbitrary amount of phone numbers and email adrresses efficiently as it is not unheard of individuals to have multiple emails/phone numbers 
 # Mentor table
 ### Fields:
 ID - int PrimaryKey AutoIncrement
+
 Name - string not null
 
 # MentorPhone table
 ID - int PrimaryKey AutoIncrement
+
 MentorId - int refrences(Mentor) not null
+
 PhoneNumber - string not null
+
 
 # MentorEmail Table
 ID - int PrimaryKey AutoIncrement
+
 MentorId - int refrences(Mentor) not null
+
 email - string not null
+
 
 # Notification table
 Note: this table is used for the application to find specific notifications post-creation
+
 ID - int PrimaryKey AutoIncrement
+
 TableID - refrences(Id of any other table) not null
+
 TableName - string not null (note: refrences the name another table)
+
 Name - string not null
+
+
 
 Please feel free to contact me with any questions on this applications.
