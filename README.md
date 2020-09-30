@@ -33,8 +33,8 @@ Accessed through the magnifying glass in the toolbar (described later) and provi
 
 Accessed through the drop menu in the toolbar (described later) and provides an overview of the values in the database as a whole. cliking on one the items and its count will display a list of all of the item  within the database. Clicking a specific item will bring it up in its AddModd activity.
 
-#Fragments
-##DatePickerDialogFragment
+# Fragments
+## DatePickerDialogFragment
 
 The only fragment used in the application. Used whenever a field that requires a date to bring up a calander that allows the user to select a date. When/if a date is selected, that date is formatted and returned to the calling activity. If the selection is canceled by closing the fragment, the old value is maintained (either the old date, or null which will fail validation).
 
