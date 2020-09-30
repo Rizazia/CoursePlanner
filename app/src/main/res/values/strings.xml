@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">CoursePlanner</string>
+    <string name="btnTerms">Terms</string>
+    <string name="btnCourses">Courses</string>
+    <string name="btnAssessments">Assessments</string>
+    <string name="btnMentors">Mentors</string>
+    <string name="name">Name</string>
+    <string name="tvStartDate">Start Date</string>
+    <string name="tvEndDate">End Date</string>
+    <string name="tvSelect">Select a Date</string>
+    <string name="btnSubmit">Submit</string>
+    <string name="btnCancel">Cancel</string>
+    <string name="etTerm">Term</string>
+    <string name="etMentor">Mentor</string>
+    <string name="etStatus">Status</string>
+    <string name="btnDelete">Delete</string>
+    <string name="tvNote">Note:</string>
+    <string name="etNote">Enter Notes</string>
+    <string name="tvPhoneNumber">Phone Number:</string>
+    <string name="tvEmail">Email:</string>
+    <string name="tvCourse">Course</string>
+    <string name="tvType">Type</string>
+    <string name="tvDisplayNotification">Enable Notifications: </string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="share">Share</string>
+    <string name="Home">Home</string>
+    <string name="To"> TO </string>
+    <string name="Target">Target:</string>
+    <string name="search_button">Search Button</string>
+
+    <string name="ID"></string>
+    <string name="TABLE"></string>
+    <string name="search">Search</string>
+    <string name="current_enrollment">Current Enrollment</string>
+    <string name="overview">Overview</string>
+</resources>

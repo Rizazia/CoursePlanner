@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/itmSearch"
+        app:showAsAction="ifRoom"
+        android:title="@string/search"
+        android:icon="@drawable/ic_search_white_24dp"/>
+
+    <item android:id="@+id/itmOverview"
+        android:title="@string/overview"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/itmCurrent"
+        android:title="@string/current_enrollment"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/itmHome"
+        android:title="@string/Home"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/itmTerms"
+        android:title="@string/btnTerms"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/itmCourses"
+        android:title="@string/btnCourses"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/itmAssessments"
+        android:title="@string/btnAssessments"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/itmMentors"
+        android:title="@string/btnMentors"
+        app:showAsAction="never" />
+
+</menu>

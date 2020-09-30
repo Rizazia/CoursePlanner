@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddModCourseActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clBase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/llRange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="95dp"
+                android:layout_marginLeft="95dp"
+                android:layout_marginTop="200dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvRangeStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvStartDate" />
+
+                <TextView
+                    android:id="@+id/tvRangeTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/To" />
+
+                <TextView
+                    android:id="@+id/tvRangeEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:layout_editor_absoluteX="106dp"
+                    tools:text="@string/tvEndDate" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:ems="10"
+                android:hint="@string/name"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:text="@string/name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTermSelectedStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="20dp"
+                android:onClick="tvStartDateIsClicked"
+                android:text="@string/tvSelect"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/tvStartDate"
+                app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+            <TextView
+                android:id="@+id/tvStartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/tvStartDate"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+            <TextView
+                android:id="@+id/tvEndDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/tvEndDate"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvStartDate" />
+
+            <TextView
+                android:id="@+id/tvTermSelectedEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="68dp"
+                android:layout_marginLeft="68dp"
+                android:layout_marginTop="20dp"
+                android:onClick="tvEndDateIsClicked"
+                android:text="@string/tvSelect"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/tvEndDate"
+                app:layout_constraintTop_toBottomOf="@+id/tvTermSelectedStart" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:onClick="btnSubmitIsClicked"
+                android:text="@string/btnSubmit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rgroupRadioContainer" />
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:onClick="btnCancelIsClicked"
+                android:text="@string/btnCancel"
+                app:layout_constraintStart_toEndOf="@+id/btnSubmit"
+                app:layout_constraintTop_toBottomOf="@+id/rgroupRadioContainer" />
+
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:onClick="btnDeleteIsClicked"
+                android:text="@string/btnDelete"
+                app:layout_constraintStart_toEndOf="@+id/btnCancel"
+                app:layout_constraintTop_toBottomOf="@+id/rgroupRadioContainer" />
+
+            <ImageButton
+                android:id="@+id/ibtnShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="18dp"
+                android:clickable="true"
+                android:contentDescription="@string/share"
+                android:focusable="true"
+                android:onClick="ibtnShareIsClicked"
+                app:backgroundTint="@color/colorPrimaryDark"
+                app:layout_constraintStart_toEndOf="@+id/btnDelete"
+                app:layout_constraintTop_toBottomOf="@+id/rgroupRadioContainer"
+                app:srcCompat="@drawable/ic_mail_outline_black_24dp" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabNewAssessment"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="256dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="fabNewMentorIsClicked"
+                app:fabCustomSize="24dp"
+                app:layout_constraintStart_toEndOf="@+id/llMentorContainer"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_add_black_24dp" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabNewTerm"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="172dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="fabNewTermIsClicked"
+                app:fabCustomSize="24dp"
+                app:layout_constraintStart_toEndOf="@+id/llTermContainer"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_add_black_24dp" />
+
+            <LinearLayout
+                android:id="@+id/llTermContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginTop="170dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent">
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/etTerm"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/etTerm" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent">
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Spinner
+                    android:id="@+id/spnnrTerm"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/etTerm"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:text="@string/etTerm"
+                    android:textSize="14sp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent">
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llStatusContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginTop="220dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent">
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/etStatus"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/etStatus" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent">
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Spinner
+                    android:id="@+id/spnnrStatus"
+                    android:layout_width="200dp"
+                    android:layout_height="24dp"
+                    android:hint="@string/etStatus"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:text="@string/etStatus"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMentorContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginTop="260dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent">
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/etMentor"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/etMentor" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent">
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Spinner
+                    android:id="@+id/spnnrMentor"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/etMentor"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:text="@string/etMentor"
+                    android:textSize="14sp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="27dp"
+                    android:layout_height="match_parent">
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llNoteContainer"
+                android:layout_width="409dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llMentorContainer">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent">
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvNote" />
+
+                <EditText
+                    android:id="@+id/etNotes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:hint="@string/etNote"
+                    android:importantForAutofill="no"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical" />
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/rgroupRadioContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llNoteContainer">
+
+                <TextView
+                    android:id="@+id/tvDisplayNotification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvDisplayNotification" />
+
+                <RadioButton
+                    android:id="@+id/rbTrue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/yes" />
+
+                <RadioButton
+                    android:id="@+id/rbFalse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/no" />
+            </RadioGroup>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="statusList">
+        <item>Plan to Take</item>
+        <item>Completed</item>
+        <item>Dropped</item>
+        <item>In Progress</item>
+    </string-array>
+    <string-array name="statusListAssessment">
+        <item>Plan to Attempt</item>
+        <item>In progress</item>
+        <item>Result Pending</item>
+        <item>Complete</item>
+    </string-array>
+    <string-array name="typeAssessmentList">
+        <item>Performance</item>
+        <item>Objective</item>
+    </string-array>
+</resources>
