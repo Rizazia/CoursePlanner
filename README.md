@@ -38,6 +38,10 @@ Accessed through the drop menu in the toolbar (described later) and provides an 
 
 The only fragment used in the application. Used whenever a field that requires a date to bring up a calander that allows the user to select a date. When/if a date is selected, that date is formatted and returned to the calling activity. If the selection is canceled by closing the fragment, the old value is maintained (either the old date, or null which will fail validation).
 
+## Toolbar
+
+Contained only in XML but will be described here. Exists at the top of every activity and simply provides access to all activities in the application. Also displays the name of the current activity.
+
 # Classes
 ## ChannelHandler NotificationHelper & NotificationReceiver
 
