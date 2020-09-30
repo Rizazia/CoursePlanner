@@ -43,11 +43,11 @@ The only fragment used in the application. Used whenever a field that requires a
 
 These classes work together to accomplish a single task and as such will be explained togeether. Whenever a notification is created, it is sent through the reciever and managed by the helper that adds/cancels the notification to the channel decided in ChannelHandler.
 
-##DBHelper
+## DBHelper
 
 Handles all interaction with the SQLite database used in this application. Since this is a SQLite database and not a regular SQL database this class handles the creation of the database. All interactions with the database pass through this class. The structure of the database is described below.
 
-#Database Structure
+# Database Structure
 
 As described earlier, this application uses SQLite which provides offline access but prevents loading a specific institution's courses and information, which would be my desired outcome if I were further develop this application. And becaue of that the database is stored on the local device and defined within the application as follows.
 
